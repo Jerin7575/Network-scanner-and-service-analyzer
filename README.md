@@ -1,35 +1,30 @@
-Network Scanner and Service Analyzer
+# Network Scanner and Service Analyzer
 
-«A lightweight Python-based network reconnaissance tool for TCP port scanning, service detection, banner grabbing, and HTML report generation.»
+A lightweight Python-based network reconnaissance tool for TCP port scanning, service detection, banner grabbing, and HTML report generation.
 
-"Python" (https://img.shields.io/badge/Python-3.8%2B-blue)
-"License" (https://img.shields.io/badge/License-MIT-green)
-"Platform" (https://img.shields.io/badge/Platform-Cross--Platform-lightgrey)
-
----
-
-Overview
-
-Network Scanner and Service Analyzer is a command-line application that helps identify open TCP ports, detect common network services, retrieve service banners when available, and generate structured HTML reports.
-
-The project is designed with a modular architecture, making it easy to understand, extend, and maintain. It serves as a practical learning project for networking and cybersecurity fundamentals while remaining useful for basic network enumeration tasks.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Platform](https://img.shields.io/badge/Platform-Cross--Platform-lightgrey)
 
 ---
 
-Features
+## Overview
+
+Network Scanner and Service Analyzer is a command-line application that identifies open TCP ports, detects common network services, attempts banner grabbing where supported, and generates HTML reports summarizing the results.
+
+## Features
 
 - TCP port scanning
-- Common service identification
+- Common service detection
 - Banner grabbing
 - HTML report generation
-- Modular project structure
-- Simple command-line interface
-- Easily configurable list of target ports
+- Modular codebase
+- Configurable target ports
+- Command-line interface
 
----
+## Project Structure
 
-Project Structure
-
+```text
 Network-scanner-and-service-analyzer/
 ├── main.py
 ├── scanner.py
@@ -38,53 +33,36 @@ Network-scanner-and-service-analyzer/
 ├── utils.py
 ├── requirements.txt
 ├── reports/
+│   └── *.html
 └── README.md
+```
 
----
-
-Installation
+## Installation
 
 Clone the repository:
 
+```bash
 git clone git@github.com:Jerin7575/Network-scanner-and-service-analyzer.git
-
-Move into the project directory:
-
 cd Network-scanner-and-service-analyzer
+```
 
-Install the required dependencies:
+Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
----
+## Usage
 
-Usage
-
-Run the application:
-
+```bash
 python main.py
+```
 
 Enter the target IP address or hostname when prompted.
 
----
+## Generated Report
 
-Example Output
-
-Target: 192.168.1.10
-
-PORT     STATE    SERVICE
-22       Open     SSH
-80       Open     HTTP
-443      Open     HTTPS
-
-Generating HTML report...
-Report saved successfully.
-
----
-
-Generated Report
-
-Each scan generates an HTML report containing:
+Each scan produces an HTML report containing:
 
 - Target information
 - Scan timestamp
@@ -93,29 +71,21 @@ Each scan generates an HTML report containing:
 - Service banners (when available)
 - Scan summary
 
----
+## Roadmap
 
-Roadmap
-
-- Host discovery (Ping Sweep)
+- Host discovery
 - Multi-threaded scanning
-- UDP port scanning
-- Custom port range support
+- UDP scanning
+- Custom port ranges
 - Command-line arguments
-- Export results to JSON and CSV
+- JSON/CSV export
 - OS fingerprinting
-- Version detection
-- Progress indicator
-- Scan history
+- Service version detection
 
----
+## Disclaimer
 
-Disclaimer
+This project is intended for educational purposes and authorized security testing only. Always obtain permission before scanning systems or networks you do not own.
 
-This project is intended for educational purposes and authorized security testing only. Always obtain permission before scanning systems or networks you do not own. The author assumes no responsibility for misuse of this software.
+## License
 
----
-
-License
-
-This project is licensed under the MIT License.
+Released under the MIT License.

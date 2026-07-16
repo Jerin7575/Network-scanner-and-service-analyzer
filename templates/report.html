@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Network Scan Report</title>
+
+    <style>
+
+        body{
+            font-family:Arial,sans-serif;
+            background:#f4f4f4;
+            margin:40px;
+        }
+
+        h1{
+            color:#2c3e50;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th{
+            background:#2c3e50;
+            color:white;
+        }
+
+        th,td{
+            border:1px solid #ccc;
+            padding:10px;
+            text-align:left;
+        }
+
+        tr:nth-child(even){
+            background:#f9f9f9;
+        }
+
+        .summary{
+            background:white;
+            padding:15px;
+            margin-bottom:20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Network Scanner Report</h1>
+
+<div class="summary">
+
+<p><strong>Target:</strong> {{ target }}</p>
+
+<p><strong>Scan Date:</strong> {{ scan_date }}</p>
+
+<p><strong>Open Ports:</strong> {{ total_ports }}</p>
+
+</div>
+
+<table>
+
+<tr>
+<th>Port</th>
+<th>Service</th>
+<th>Banner</th>
+</tr>
+
+{% for item in results %}
+
+<tr>
+
+<td>{{ item.port }}</td>
+
+<td>{{ item.service }}</td>
+
+<td>{{ item.banner if item.banner else "-" }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

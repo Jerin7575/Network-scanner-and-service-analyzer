@@ -1,0 +1,3 @@
+rich
+jinja2
+reportlab
